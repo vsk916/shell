@@ -2,6 +2,16 @@
 
 ID=$(id -u)
 
+validate () {
+    if [ $? -ne 0 ]
+    then 
+        echo "Installation is failed"
+        exit 1
+    else
+        echo "Installation is sucess"
+    if
+}
+
 if [ $ID -ne 0 ]
 then
     echo "Error: you are not in the root user"
@@ -11,11 +21,7 @@ else
 fi
 
 dnf install nginx -y
+validate
 
-if [ $? -ne 0 ]
-then 
-    echo "Installation is failed"
-else
-    echo "Installation is sucess"
-if
-    
+
+
