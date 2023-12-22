@@ -3,12 +3,12 @@
 ID=$(id -u)
 
 validate () {
-    if [ $? -ne 0 ]
+    if [ $1 -ne 0 ]
     then 
-        echo "Installation is failed"
+        echo "$2 is failed"
         exit 1
     else
-        echo "Installation is sucess"
+        echo "$2 sucess"
     if
 }
 
@@ -21,7 +21,7 @@ else
 fi
 
 dnf install nginx -y
-validate
+validate $? "Installing nginx"
 
 
 
