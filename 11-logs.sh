@@ -15,16 +15,16 @@ logfile="/tmp/$0-$timestamp.log"
 validate () {
     if [ $1 -ne 0 ]
     then 
-        echo "$2 is $R.........failure$N"
+        echo -e "$2 is $R.........failure$N"
     else
-        echo "$2 is $G.........success$N"
+        echo -e "$2 is $G.........success$N"
     fi
 
     }
 
 if [ $ID -ne 0 ]
 then 
-    echo "$R Error you are not in the root user$N"
+    echo -e "$R Error you are not in the root user$N"
 else
     echo "You are in the root user"
 fi
