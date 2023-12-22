@@ -6,11 +6,11 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-
-
 timestamp=$(date +%F-%H-%M-%S)
 
 logfile="/tmp/$0-$timestamp.log"
+
+echo "Script started executing at $timestamp"
 
 validate () {
     if [ $1 -ne 0 ]
