@@ -11,7 +11,7 @@ then
 echo -e "Source file : $source_file does not exit"
 fi
 
-file_to_delete=$(find . -type f -mtime +14 -name "*.log")
+file_to_delete=$(find $source_file -type f -mtime +14 -name "*.log")
 
 while IFS= read -r line
 do 
