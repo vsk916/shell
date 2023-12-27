@@ -13,7 +13,7 @@ fi
 
 file_to_delete=$(find . -type f -mtime +14 -name "*.log")
 
-while IFS=read -r line
+while IFS= read -r line
 do 
 echo "Deleting file.....$line"
 #rm -rf $line
