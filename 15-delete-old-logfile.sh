@@ -8,7 +8,7 @@ N="\e[0m"
 
 if [ ! -d $source_file ]
 then
-echo -e "Source file : $source_file does not exit"
+echo -e "$R Source file : $source_file does not exit $N"
 fi
 
 file_to_delete=$(find $source_file -type f -mtime +14 -name "*.log")
