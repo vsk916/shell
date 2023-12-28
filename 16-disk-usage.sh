@@ -23,5 +23,5 @@ done <<< $Disk_usage
    echo "Mail has been sent"
 
   else
-   echo "Mail has not sent"
+   echo -e "Mail has not sent"
    fi
