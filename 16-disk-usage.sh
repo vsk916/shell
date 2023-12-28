@@ -20,10 +20,4 @@ done <<< $Disk_usage
 
   sh mail.sh "DevOps Team" "High disk usage" "$message" "vamsisaikrishna.pentela@gmail.com" "Alert High disk usage"
 
-  if [ $? -eq 0 ]
-  then 
-   echo "Mail has been sent"
 
-  else
-   echo "Mail has not sent"
-   fi
