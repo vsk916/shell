@@ -10,10 +10,17 @@ do
     partition=$(echo $line | awk '{print $1F}')
     if [ $usage -gt $Disk_Threshold ]
     then
-    message+="High disusage  on $partition: $usage\n"
+    message+="High disk usage  on partition name : $partition: $usage\n"
     fi
 done <<< $Disk_usage
 
   echo -e "Message: $message"
 
   echo "Please find the Disk usage details $message" | mail -s "Disk usage alert" vamsisaikrishna.pentela@gmail.com
+
+  If [ $? -eq 0 ]
+  then 
+   echo "Mail has been sent"
+  else
+   echo "Mail has not sent"
+   fi
