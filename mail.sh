@@ -7,4 +7,4 @@ Subject=$5
 Final_Body=$(sed -e 's/TO_TEAM/$TO_TEAM/g' -e '/Alert_type/$Alert_type/g' -e 's/Body/$Body/g' html-templete.html)
 
 
-echo "$Final_Body" | mail -s "$subject" "$To_Addre"
+echo "$Final_Body" | mail -s "$Subject" "$To_Addre"
