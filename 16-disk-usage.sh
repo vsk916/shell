@@ -16,12 +16,12 @@ done <<< $Disk_usage
 
   echo -e "Message: $message"
 
-  echo "Please find the Disk usage details $message" | mail -s "Disk usage alert" vamsisaikrishna.pentela@gmail.com
+  echo -e "Please find the Disk usage details $message" | mail -s "Disk usage alert" vamsisaikrishna.pentela@gmail.com
 
   if [ $? -eq 0 ]
   then 
    echo "Mail has been sent"
 
   else
-   echo -e "Mail has not sent"
+   echo "Mail has not sent"
    fi
