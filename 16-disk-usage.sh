@@ -7,7 +7,7 @@ message=""
 while IFS= read -r line
 do 
   usage=$(echo $line |awk '{print $5F}'|cut -d % -f1)
-  partition=$(echo $line | awk '{print $1F})'
+  partition=$(echo $line | awk '{print $1F}')
   if [ $usage -ge $Disk_Threshold ]
   then
   message+="High disusage  on $partition: $usage"
