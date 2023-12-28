@@ -16,7 +16,9 @@ done <<< $Disk_usage
 
   echo -e "Message: $message"
 
-  echo -e "Please find the Disk usage details $message" | mail -s "Disk usage alert" vamsisaikrishna.pentela@gmail.com
+  #echo -e "Please find the Disk usage details $message" | mail -s "Disk usage alert" vamsisaikrishna.pentela@gmail.com
+
+  sh mail.sh "DevOps Team" "High disk usage" "$message" "vamsisaikrishna.pentela@gmail.com" "Alert High disk usage"
 
   if [ $? -eq 0 ]
   then 
