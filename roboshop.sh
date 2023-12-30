@@ -13,7 +13,9 @@ do
   else
       INSTANCE_TYPE=t2.micro
   fi
-  aws ec2 run-instances --image-id $AMI_ID --instance-type $INSTANCE_TYPE --security-group-ids $SG_ID --tag-specification "ResourceType=instance,Tags=[{Key=Name,Value=$i}]" --query 'Instances[0].PrivateAddress' --output text
+   IP_ADDRESS=$(aws ec2 run-instances --image-id $AMI_ID --instance-type $INSTANCE_TYPE --security-group-ids $SG_ID --tag-specification "ResourceType=instance,Tags=[{Key=Name,Value=$i}]" --query 'Instances[0].PrivateAddress' --output text)
+
+  echo "$i: $IP_ADDRESS"
   
 done
 
